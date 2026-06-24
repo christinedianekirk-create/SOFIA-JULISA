@@ -366,3 +366,108 @@ ACTUALIZACIÓN
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFÍA – Tu Compañera</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #1a1d21; /* Fondo Slack oscuro */
+            color: #e0e0e0;
+        }
+
+        /* Sidebar estilo Slack */
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background: #3f0e40; /* Morado Slack */
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .sidebar a {
+            padding: 14px 22px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+            border-left: 4px solid transparent;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #350d36;
+            border-left: 4px solid #bb86fc;
+        }
+
+        /* Contenido principal */
+        .content {
+            margin-left: 260px;
+            padding: 30px;
+        }
+
+        .card {
+            background: #2c2f33;
+            padding: 22px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>SOFÍA</h2>
+        <a href="#">Inicio</a>
+        <a href="#">Legal</a>
+        <a href="#">Finanzas</a>
+        <a href="#">Salud</a>
+        <a href="#">Educación</a>
+        <a href="#">Motivación</a>
+        <a href="#">Recetas</a>
+        <a href="#">Postres</a>
+        <a href="#">Ayuda</a>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h3>Bienvenida, familia</h3>
+            <p>SOFÍA está aquí para apoyar a nuestra familia en México con herramientas, información y acompañamiento.</p>
+        </div>
+
+        <div class="card">
+            <h3>¿Qué necesitas hoy?</h3>
+            <p>Selecciona una opción del menú para comenzar.</p>
+        </div>
+    </div>
+
+</body>
+</html>
