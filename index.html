@@ -273,3 +273,96 @@ ACTUALIZACIÓN
 - Noticias familiares
 - Avisos
 - Cambios en la app
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFÍA – Tu Compañera</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        /* Menú lateral */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #7b1fa2;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar a:hover {
+            background: #9c27b0;
+        }
+
+        /* Contenido principal */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>SOFÍA</h2>
+        <a href="#">Inicio</a>
+        <a href="#">Legal</a>
+        <a href="#">Finanzas</a>
+        <a href="#">Salud</a>
+        <a href="#">Educación</a>
+        <a href="#">Motivación</a>
+        <a href="#">Recetas</a>
+        <a href="#">Postres</a>
+        <a href="#">Ayuda</a>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h3>Bienvenida, familia</h3>
+            <p>Esta es la plataforma SOFÍA, creada para apoyar a nuestra familia en México con herramientas, información y acompañamiento.</p>
+        </div>
+
+        <div class="card">
+            <h3>¿Qué necesitas hoy?</h3>
+            <p>Selecciona una opción del menú para comenzar.</p>
+        </div>
+    </div>
+
+</body>
+</html>
