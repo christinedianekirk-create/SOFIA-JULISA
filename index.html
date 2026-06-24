@@ -1,105 +1,223 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOFÍA – Tu Compañera</title>
+/* Reset sencillo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #1a1d21; /* Fondo Slack oscuro */
-            color: #e0e0e0;
-        }
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+}
 
-        /* Sidebar estilo Slack */
-        .sidebar {
-            width: 260px;
-            height: 100vh;
-            background: #3f0e40; /* Morado Slack */
-            color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding-top: 25px;
-            display: flex;
-            flex-direction: column;
-        }
+/* Layout general */
+.app {
+  display: flex;
+  height: 100vh;
+}
 
-        .sidebar h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 22px;
-            font-weight: 600;
-        }
+/* Sidebar estilo Slack */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  border-right: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
 
-        .sidebar a {
-            padding: 14px 22px;
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 17px;
-            display: block;
-            border-left: 4px solid transparent;
-            transition: 0.2s;
-        }
+.sidebar-header {
+  padding: 8px 10px 12px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  color: #f9fafb;
+  margin-bottom: 16px;
+}
 
-        .sidebar a:hover {
-            background: #350d36;
-            border-left: 4px solid #bb86fc;
-        }
+.workspace-name {
+  font-weight: 700;
+  font-size: 15px;
+}
 
-        /* Contenido principal */
-        .content {
-            margin-left: 260px;
-            padding: 30px;
-        }
+.workspace-tag {
+  font-size: 12px;
+  opacity: 0.9;
+}
 
-        .card {
-            background: #2c2f33;
-            padding: 22px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-        }
+.sidebar-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 4px 4px 6px;
+}
 
-        .card h3 {
-            margin-top: 0;
-            color: #ffffff;
-        }
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
 
-        .card p {
-            color: #cccccc;
-        }
-    </style>
-</head>
+.menu-item {
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-<body>
+.menu-item:hover {
+  background: #1f2937;
+}
 
-    <div class="sidebar">
-        <h2>SOFÍA</h2>
-        <a href="#">Inicio</a>
-        <a href="#">Legal</a>
-        <a href="#">Finanzas</a>
-        <a href="#">Salud</a>
-        <a href="#">Educación</a>
-        <a href="#">Motivación</a>
-        <a href="#">Recetas</a>
-        <a href="#">Postres</a>
-        <a href="#">Ayuda</a>
-    </div>
+.menu-item.active {
+  background: #4c1d95;
+  color: #f9fafb;
+}
 
-    <div class="content">
-        <div class="card">
-            <h3>Bienvenida, familia</h3>
-            <p>SOFÍA está aquí para apoyar a nuestra familia en México con herramientas, información y acompañamiento.</p>
-        </div>
+/* Footer sidebar */
+.sidebar-footer {
+  font-size: 11px;
+  color: #9ca3af;
+  padding-top: 10px;
+  border-top: 1px solid #1f2937;
+  margin-top: 8px;
+}
 
-        <div class="card">
-            <h3>¿Qué necesitas hoy?</h3>
-            <p>Selecciona una opción del menú para comenzar.</p>
-        </div>
-    </div>
+/* Área principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-</body>
-</html>
+/* Topbar */
+.topbar {
+  height: 56px;
+  border-bottom: 1px solid #1f2937;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #020617;
+}
+
+.topbar-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.topbar-subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Área de ventanitas */
+.windows-area {
+  flex: 1;
+  padding: 16px;
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  overflow-y: auto;
+}
+
+/* Ventana tipo mini-app */
+.window {
+  display: none;
+  background: #020617;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  padding: 14px 16px 16px;
+  max-width: 980px;
+}
+
+.window.active {
+  display: block;
+}
+
+.window-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.window-header h2 {
+  font-size: 18px;
+}
+
+.window-tag {
+  font-size: 11px;
+  color: #a5b4fc;
+  background: rgba(79, 70, 229, 0.15);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* Tarjetas dentro de la ventana */
+.window-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  padding: 10px 12px;
+}
+
+.card h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #e5e7eb;
+}
+
+.card p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    height: auto;
+  }
+
+  .sidebar-header,
+  .sidebar-footer,
+  .sidebar-section-title {
+    display: none;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .menu-item {
+    white-space: nowrap;
+  }
+
+  .windows-area {
+    padding: 10px;
+  }
+}
