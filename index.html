@@ -1,23 +1,81 @@
-// Cambiar de ventana al hacer clic en el menú lateral
-const menuItems = document.querySelectorAll(".menu-item");
-const windows = document.querySelectorAll(".window");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFÍA – Tía Julisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const targetId = item.getAttribute("data-target");
+<body>
+    <div class="app">
 
-    // Quitar "active" de todos los botones
-    menuItems.forEach((btn) => btn.classList.remove("active"));
-    // Poner "active" al botón actual
-    item.classList.add("active");
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">SOFÍA</h2>
 
-    // Ocultar todas las ventanas
-    windows.forEach((win) => win.classList.remove("active"));
+            <nav class="menu">
+                <button class="menu-item active" data-target="inicio">Inicio</button>
+                <button class="menu-item" data-target="costura">Costura (Tía Julisa)</button>
+                <button class="menu-item" data-target="salud">Salud</button>
+                <button class="menu-item" data-target="finanzas">Finanzas</button>
+                <button class="menu-item" data-target="motivacion">Motivación</button>
+                <button class="menu-item" data-target="recetas">Recetas</button>
+                <button class="menu-item" data-target="postres">Postres</button>
+                <button class="menu-item" data-target="bolis">Bolis</button>
+                <button class="menu-item" data-target="aguas">Aguas Frescas</button>
+                <button class="menu-item" data-target="manualidades">Manualidades</button>
+                <button class="menu-item" data-target="maestros">Maestros</button>
+                <button class="menu-item" data-target="tramites">Trámites</button>
+                <button class="menu-item" data-target="profesiones">Profesiones</button>
+                <button class="menu-item" data-target="cursos">Cursos</button>
+                <button class="menu-item" data-target="legal">Legal</button>
+                <button class="menu-item" data-target="busqueda">Búsqueda Inteligente</button>
+                <button class="menu-item" data-target="crecimiento">Crecimiento Económico</button>
+                <button class="menu-item" data-target="reciclaje">Reciclaje</button>
+                <button class="menu-item" data-target="universidad">Universidad Familiar</button>
+                <button class="menu-item" data-target="actualizacion">Actualización</button>
+            </nav>
+        </aside>
 
-    // Mostrar solo la ventana seleccionada
-    const targetWindow = document.getElementById(targetId);
-    if (targetWindow) {
-      targetWindow.classList.add("active");
-    }
-  });
-});
+        <!-- MAIN WINDOWS -->
+        <main class="content">
+
+            <section id="inicio" class="window active">
+                <h1>Bienvenida, Tía Julisa</h1>
+                <p>Este espacio está hecho especialmente para ti, con cariño y admiración.</p>
+            </section>
+
+            <section id="costura" class="window">
+                <h1>Costura Profesional</h1>
+                <p>Guías, técnicas, patrones y consejos para tu trabajo diario.</p>
+            </section>
+
+            <section id="salud" class="window">
+                <h1>Salud para Costureras</h1>
+                <p>Ejercicios, cuidados y prevención para tu bienestar.</p>
+            </section>
+
+            <section id="finanzas" class="window">
+                <h1>Finanzas</h1>
+                <p>Herramientas para organizar ingresos, gastos y metas.</p>
+            </section>
+
+            <section id="motivacion" class="window">
+                <h1>Motivación</h1>
+                <p>Frases, videos y mensajes para inspirarte cada día.</p>
+            </section>
+
+            <section id="recetas" class="window">
+                <h1>Recetas</h1>
+                <p>Comida casera, fácil y deliciosa.</p>
+            </section>
+
+            <section id="postres" class="window">
+                <h1>Postres</h1>
+                <p>Dulces para la familia y para vender.</p>
+            </section>
+
+            <section id="bolis" class="window">
+                <h1>Bolis y Nieves</h1>
+                <p>Recetas refrescantes para negocio
