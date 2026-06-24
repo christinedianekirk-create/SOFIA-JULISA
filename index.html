@@ -203,3 +203,89 @@ body {
 .window.active {
     display: block;
 }
+/* ====== ESTILOS GENERALES ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+    width: 260px;
+    background: #4b0082;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #6a0dad;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background: #7e1bcf;
+}
+
+.menu-item.active {
+    background: #9b4de3;
+}
+
+/* ====== CONTENIDO ====== */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #1e1e1e;
+}
+
+/* ====== VENTANAS ====== */
+.window {
+    display: none;
+}
+
+.window.active {
+    display: block;
+}
+
+/* ====== TITULOS ====== */
+h1, h2, h3 {
+    color: #d9b3ff;
+}
+
+/* ====== BOTONES INTERNOS ====== */
+button {
+    background: #6a0dad;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #8c1fe0;
+}
