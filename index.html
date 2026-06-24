@@ -147,3 +147,59 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: white;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: #4b0082;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #6a0dad;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.menu-item.active {
+    background: #9b4de3;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #121212;
+}
+
+.window {
+    display: none;
+}
+
+.window.active {
+    display: block;
+}
